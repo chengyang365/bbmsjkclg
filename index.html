@@ -418,7 +418,7 @@
                                         <div className="flex items-center gap-2 text-sm font-bold text-slate-400 uppercase tracking-wider">
                                             <span className="w-2 h-2 bg-pink-400 rounded-full"></span> 年级 (Tahun)
                                         </div>
-                                        <div className="flex flex-nowrap overflow-x-auto gap-3 no-scrollbar pb-1">
+                                        <div className="flex flex-nowrap overflow-x-auto gap-1 no-scrollbar pb-1">
                                             <button onClick={() => setSelectedGrade("ALL")} className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${selectedGrade === "ALL" ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20 transform scale-105' : 'bg-slate-50 text-slate-500 hover:bg-slate-100'}`}>全部 (Semua)</button>
                                             {GRADES.map(g => (
                                                 <button key={g.id} onClick={() => setSelectedGrade(g.id)} className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all whitespace-nowrap border-2 border-transparent ${selectedGrade === g.id ? 'bg-white border-current shadow-md transform scale-105 ' + g.tagClass.split(' ')[1] + ' border-' + g.tagClass.split('-')[1] + '-200' : 'bg-slate-50 text-slate-500 hover:bg-slate-100'}`} style={selectedGrade === g.id ? {borderColor: 'currentColor'} : {}}>{g.label}</button>
@@ -430,7 +430,7 @@
                                         <div className="flex items-center gap-2 text-sm font-bold text-slate-400 uppercase tracking-wider">
                                             <span className="w-2 h-2 bg-blue-400 rounded-full"></span> 科目 (Mata Pelajaran)
                                         </div>
-                                        <div className="flex flex-nowrap overflow-x-auto gap-3 no-scrollbar pb-1">
+                                        <div className="flex flex-nowrap overflow-x-auto gap-1 no-scrollbar pb-1">
                                             <button onClick={() => setSelectedSubject("ALL")} className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${selectedSubject === "ALL" ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20 transform scale-105' : 'bg-slate-50 text-slate-500 hover:bg-slate-100'}`}>全部 (Semua)</button>
                                             {SUBJECTS.map(s => (
                                                 <button key={s.id} onClick={() => setSelectedSubject(s.id)} className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all whitespace-nowrap border-2 border-transparent ${selectedSubject === s.id ? 'bg-white border-current shadow-md transform scale-105 ' + s.tagClass.split(' ')[1] : 'bg-slate-50 text-slate-500 hover:bg-slate-100'}`} style={selectedSubject === s.id ? {borderColor: 'currentColor'} : {}}>{s.label}</button>
